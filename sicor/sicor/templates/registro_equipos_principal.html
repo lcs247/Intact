@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title%}
+<head>
+	<title>SICOR-REGISTRO-EQUIPO</title>
+</head>
+{% endblock%}
+{% block content%}
+    <div class="page-section">
+        <div class="container">
+          <h1 class="text-center wow fadeInUp">Registro de Equipos Principales</h1>
+          <form class="contact-form mt-5" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row mb-3">
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Planta Principal</label>
+                {{form.planta}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Planta Secundaria</label>
+                {{form.planta_secundaria}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Sistema</label>
+                {{form.sistema}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Sub-Sistema</label>
+                {{form.subsistema}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label>Código</label>
+                {{form.codigo}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Nombre del Equipo</label>
+                {{form.nombre}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Marca</label>
+                {{form.marca}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Modelo</label>
+                {{form.modelo}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Serie</label>
+                {{form.serie}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Tipo</label>
+                {{form.tipo}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Código de Activo</label>
+                {{form.codigo_de_activo}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Fecha de Instalación</label>
+                {{form.año}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Capacidad de Diseño/Operativa</label>
+                {{form.capacidad}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Potencia</label>
+                {{form.potencia}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Presión descarga</label>
+                {{form.presion}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Producto</label>
+                {{form.producto}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Temperatura</label>
+                {{form.temperatura}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Voltaje</label>
+                {{form.voltaje}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Nro. de Fases</label>
+                {{form.fases}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label>Datasheet</label>
+                {{form.datasheet}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label>Fecha de último mantenimiento integral</label>
+                {{form.fu_mantenimiento}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Estado Operativo</label>
+                {{form.estado}}
+              </div>
+              <div class="col-12 py-2 wow fadeInUp">
+                <label >Observaciones</label>
+                {{form.observaciones}}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary wow zoomIn">Registrar Equipo</button>
+          </form>
+        </div>
+    </div>
+
+{% endblock%}

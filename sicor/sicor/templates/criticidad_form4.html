@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title%}
+<head>
+	<title>SICOR-REGISTRO-CRITICIDAD</title>
+</head>
+{% endblock%}
+{% block content%}
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="page-section">
+        <div class="container">
+          <h1 class="text-center wow fadeInUp">Formulario de Registro de Criticidad de Equipos</h1>
+          <form class="contact-form mt-5" action="" method="post">
+            {% csrf_token %}
+            <div class="row mb-3">
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label >Activo</label>
+                {{form.activo}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Redundancia</label>
+                {{form.r}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label>Ocurrencia</label>
+                {{form.ocurrencia}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Seguridad y Salud</label>
+                {{form.segysa}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label>Medio Ambiente</label>
+                {{form.md}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label>Costo de Mantenimiento</label>
+                {{form.cm}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInLeft">
+                <label>Pérdida de Producción</label>
+                {{form.pp}}
+              </div>
+              <div class="col-sm-6 py-2 wow fadeInRight">
+                <label >Exposición</label>
+                {{form.ex}}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary wow zoomIn">Registrar</button>
+          </form>
+        </div>
+    </div>
+</form>
+{% endblock%}
